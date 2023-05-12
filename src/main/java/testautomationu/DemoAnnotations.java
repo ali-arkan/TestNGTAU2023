@@ -3,61 +3,86 @@ package testautomationu;
 import org.testng.annotations.*;
 
 public class DemoAnnotations {
-
-    @BeforeMethod
-    public void beforeMethod(){
-
-    }
-
-
     @BeforeSuite
-    public void beforeSuite(){
+    public void beforeSuite()
+    {
         System.out.println("Chrome - Set Up System Property");
     }
 
     @BeforeTest
-    public void beforeTest(){
-
+    public void beforeTest()
+    {
+        System.out.println("Open Chrome");
     }
 
     @BeforeClass
-    public void beforeClass(){
-
+    public void beforeClass()
+    {
+        System.out.println("Open Test Application");
     }
 
     @BeforeMethod
-    public void beforeMethod(){
-
+    public void beforeMethod()
+    {
+        System.out.println("Sign In");
     }
 
     @Test
-    public void test(){
-
+    public void searchCustomer()
+    {
+        System.out.println("Search For Customer");
     }
 
-    @AfterSuite
-    public void afterSuite(){
-
-    }
-
-    @AfterTest
-    public void afterTest(){
-
-    }
-
-    @AfterClass
-    public void afterClass(){
-
+    @Test
+    public void searchProduct()
+    {
+        System.out.println("Search For Product");
     }
 
     @AfterMethod
-    public void afterMethod(){
-
+    public void afterMethod()
+    {
+        System.out.println("Sign Out");
     }
 
+    @AfterClass
+    public void afterClass()
+    {
+        System.out.println("Close Test Application");
+    }
 
+    @AfterTest
+    public void afterTest()
+    {
+        System.out.println("Close Chrome");
+    }
 
-
-
-
+    @AfterSuite
+    public void afterSuite()
+    {
+        System.out.println("Chrome - Clean Up All Cookies");
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
